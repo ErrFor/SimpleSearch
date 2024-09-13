@@ -69,7 +69,11 @@ button:hover {
 #download-button {
     display: none;
     margin: 10px auto;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease, background-color 0.3s ease;
+}
+
+#download-button:hover {
+    background-color: #0056b3;
 }
 
 #results {
@@ -91,10 +95,9 @@ button:hover {
 #results h2 a {
     text-decoration: none;
     color: #007bff;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
 #results h2 a:hover {
-    text-decoration: underline;
     color: #0056b3;
 }
