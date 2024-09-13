@@ -1,6 +1,6 @@
 # SimpleSearch
 
-SimpleSearch is a lightweight web application designed to perform searches using the Google Custom Search API. It allows users to enter a search query, view the results, and download them in various formats. The application is built with HTML, CSS, and JavaScript.
+SimpleSearch is a lightweight web application designed to perform searches using the Google Custom Search API. It allows users to enter a search query, view the first 10 results from Google, and download them in various formats. The application is built with HTML, CSS, and JavaScript.
 
 ## Features
 
