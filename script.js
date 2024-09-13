@@ -2,6 +2,25 @@
 const apiKey = 'AIzaSyDEkhxSj3di6-gQGTF6rhr1jfEChp9QDxs';
 const cx = '576dc3c5d7fc64463';
 
+// Function to hide elements initially
+function hideElements() {
+    const downloadButton = document.getElementById('download-button');
+    const formatSelect = document.getElementById('format-select');
+    downloadButton.style.display = 'none';
+    formatSelect.style.display = 'none';
+}
+
+// Function to show elements after search results are fetched
+function showElements() {
+    const downloadButton = document.getElementById('download-button');
+    const formatSelect = document.getElementById('format-select');
+    downloadButton.style.display = 'block';
+    formatSelect.style.display = 'block';
+}
+
+// Hide elements on page load
+hideElements();
+
 document.getElementById('search-form').addEventListener('submit', function(event) {
     event.preventDefault();
     const query = document.getElementById('query').value;
@@ -14,6 +33,10 @@ function fetchResults(query, start = 1) {
         .then(data => {
             const resultsDiv = document.getElementById('results');
             resultsDiv.innerHTML = '';
+
+            // Show results container
+            resultsDiv.style.display = 'block';
+
             if (data.items) {
                 const results = data.items.map(result => ({
                     title: result.title,
@@ -27,10 +50,12 @@ function fetchResults(query, start = 1) {
                     resultsDiv.appendChild(div);
                 });
 
+                // Show download button and format select after results are loaded
+                showElements();
+
                 const downloadButton = document.getElementById('download-button');
                 const formatSelect = document.getElementById('format-select');
-                downloadButton.style.display = 'block';
-                formatSelect.style.display = 'block';
+
                 downloadButton.onclick = () => {
                     const format = formatSelect.value;
                     let blob, url, a;

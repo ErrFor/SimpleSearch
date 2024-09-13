@@ -5,10 +5,12 @@ body {
     justify-content: flex-start;
     height: 100vh;
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
 }
 
 h1 {
+    color: #333;
     text-align: center;
     margin-top: 20px;
 }
@@ -16,6 +18,29 @@ h1 {
 #search-form {
     text-align: center;
     margin-bottom: 20px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 300px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
 }
 
 #format-select {
@@ -29,6 +54,24 @@ h1 {
 }
 
 #results {
+    display: none;
     max-width: 600px;
     margin: 0 auto;
+    padding: 20px;
+    background-color: #fff; /* Белый фон для результатов */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#results div {
+    margin-bottom: 15px;
+}
+
+#results h2 a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+#results h2 a:hover {
+    text-decoration: underline;
 }
