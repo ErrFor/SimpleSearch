@@ -7,12 +7,14 @@ body {
     margin: 0;
     font-family: 'Arial', sans-serif;
     background-color: #f4f4f9;
+    transition: background-color 0.3s ease;
 }
 
 h1 {
     color: #333;
     text-align: center;
     margin-top: 20px;
+    transition: color 0.3s ease;
 }
 
 #search-form {
@@ -27,6 +29,11 @@ input[type="text"] {
     border-radius: 4px;
     font-size: 16px;
     width: 300px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #007bff;
 }
 
 button {
@@ -37,6 +44,7 @@ button {
     color: white;
     font-size: 16px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
@@ -46,11 +54,22 @@ button:hover {
 #format-select {
     display: none;
     margin: 10px auto;
+    transition: opacity 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; /* Плавное изменение видимости, тени и цвета границы */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#format-select:hover {
+    display: block;
+    border-color: #007bff;
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+    background-color: #f0f8ff;
 }
 
 #download-button {
     display: none;
     margin: 10px auto;
+    transition: opacity 0.3s ease;
 }
 
 #results {
@@ -58,9 +77,11 @@ button:hover {
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #fff; /* Белый фон для результатов */
+    background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s ease;
 }
 
 #results div {
@@ -70,8 +91,10 @@ button:hover {
 #results h2 a {
     text-decoration: none;
     color: #007bff;
+    transition: color 0.3s ease;
 }
 
 #results h2 a:hover {
     text-decoration: underline;
+    color: #0056b3;
 }
